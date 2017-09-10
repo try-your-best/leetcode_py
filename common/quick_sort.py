@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 __author__ = 'DamonHao'
 
+# 在最坏的情况下，待排序的序列为正序或者逆序, 复杂度为 O(n^2). 关键是 partition 返回的下标不要偏。
+
 
 def quick_sort(ary, left, right):
 	if left < right:

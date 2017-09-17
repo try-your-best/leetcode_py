@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
-def mergesort(seq):
+def merge_sort(seq):
 	if len(seq) <= 1:
 		return seq
 	mid = int(len(seq) / 2)
-	left = mergesort(seq[:mid])
-	right = mergesort(seq[mid:])
+	left = merge_sort(seq[:mid])
+	right = merge_sort(seq[mid:])
 	return merge(left, right)
 
 
@@ -27,4 +27,4 @@ def merge(left, right):
 
 if __name__ == '__main__':
 	seq = [4, 5, 7, 9, 7, 5, 1, 0, 7, -2, 3, -99, 6]
-	print(mergesort(seq))
+	print(merge_sort(seq))

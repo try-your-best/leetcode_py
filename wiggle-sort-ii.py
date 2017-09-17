@@ -26,19 +26,34 @@ class Solution(object):
 		:rtype: void Do not return anything, modify nums in-place instead.
 		"""
 		nums.sort()
-		print nums
-		# mid = (len(nums) + 1) / 2
-		# nums[::2], nums[1::2] = nums[:mid:-1], nums[mid::-1]
-
-		med = (len(nums) + 1) / 2
-		# med = (len(nums) - 1) / 2
-		print nums[med::-1]
-		print nums[:med:-1]
+		med = (len(nums) - 1) / 2
 		nums[::2], nums[1::2] = nums[med::-1], nums[:med:-1]
+
+
+class Solution2(object):
+	def wiggleSort(self, nums):
+		"""
+		:type nums: List[int]
+		:rtype: void Do not return anything, modify nums in-place instead.
+		"""
+		nums.sort()
+		temp = [num for num in nums]
+		bigIdx = len(temp) - 1
+		lessIdx = bigIdx/2
+
+		for idx in xrange(len(temp)):
+			if idx % 2:
+				nums[idx] = temp[bigIdx]  # 下标都是从大到小，中间有些一样大小的数字
+				bigIdx -= 1
+			else:
+				nums[idx] = temp[lessIdx]
+				lessIdx -= 1
 
 
 if __name__ == "__main__":
 	nums = [1, 5, 1, 1, 6, 4]
-	Solution().wiggleSort(nums)
+	nums = [1, 3, 2, 2, 3, 1]
+	# Solution().wiggleSort(nums)
+	Solution2().wiggleSort(nums)
 	print nums
 

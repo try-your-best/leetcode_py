@@ -5,7 +5,8 @@ def binarySearch(ary, t):
 	low = 0
 	high = len(ary) - 1
 
-	while low < high:
+	# 注意等于的情况
+	while low <= high:
 		mid = (low + high)/2
 
 		if ary[mid] < t:
@@ -21,3 +22,5 @@ def binarySearch(ary, t):
 if __name__ == '__main__':
 	ary = [1, 3, 6, 7, 10]
 	print binarySearch(ary, 6)
+	ary = [1, 2]
+	print binarySearch(ary, 2)

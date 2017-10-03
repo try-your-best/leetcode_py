@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-class TreeNode(object):
-
-	def __init__(self, value, left=None, right=None):
-		self.value = value
-		self.left = left
-		self.right = right
+from utils import TreeNode
 
 
 def preorderWalk(node):

@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+第16题，反转链表
+思路： 要用三个指针去遍历， pNode 和 pPrev 跨栈传递
+"""
 
 from kth_node_from_end import ListNode
 
@@ -21,12 +25,20 @@ def reverseList(pHead):
 	return pNewHead
 
 
-def printList(pHead):
-	values = []
-	while pHead:
-		values.append(pHead.value)
-		pHead = pHead.pNext
-	print values
+def reverseListRecurse(pNode, pPrev):
+	if pNode is None:
+		return None
+
+	pNext = pNode.pNext
+	pNode.pNext = pPrev
+	if pNext is None:
+		return pNode
+	else:
+		return reverseListRecurse(pNext, pNode)
+
+
+def reverseList2(pHead):
+	return reverseListRecurse(pHead, None)
 
 
 if __name__ == '__main__':
@@ -36,7 +48,8 @@ if __name__ == '__main__':
 	a4 = ListNode(4)
 
 	a1.pNext = a2
-	a2.pNext = a3
-	a3.pNext = a4
+	# a2.pNext = a3
+	# a3.pNext = a4
 	printList(a1)
-	printList(reverseList(a1))
+	# printList(reverseList(a1))
+	printList(reverseList2(a1))

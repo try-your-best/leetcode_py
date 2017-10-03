@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-class BinaryTreeNode(object):
+class TreeNode(object):
 
 	def __init__(self, value, left=None, right=None):
 		self.value = value
@@ -83,11 +83,11 @@ def postorderWalkLoop(node):
 
 
 if __name__ == "__main__":
-	a1 = BinaryTreeNode(1)
-	a2 = BinaryTreeNode(2)
-	a3 = BinaryTreeNode(3)
-	a4 = BinaryTreeNode(4)
-	a5 = BinaryTreeNode(5)
+	a1 = TreeNode(1)
+	a2 = TreeNode(2)
+	a3 = TreeNode(3)
+	a4 = TreeNode(4)
+	a5 = TreeNode(5)
 
 	a1.left = a2
 	a1.right = a3

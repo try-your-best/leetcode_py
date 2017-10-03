@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 __author__ = 'DamonHao'
 
-# 在最坏的情况下，待排序的序列为正序或者逆序, 复杂度为 O(n^2). 关键是 partition 返回的下标不要偏。
+"""
+在最坏的情况下，待排序的序列为正序或者逆序, 复杂度为 O(n^2). 关键是 partition 返回的下标不要偏。
+"""
 
 
 def quick_sort(ary, left, right):
@@ -13,7 +15,7 @@ def quick_sort(ary, left, right):
 
 def partition(ary, left, right):
 	pivot = ary[right]
-	i = left-1
+	i = left-1  # i 始终指向 <= pivot 的值
 	for j in xrange(left, right):
 		if ary[j] <= pivot:
 			i += 1

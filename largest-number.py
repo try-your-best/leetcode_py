@@ -25,3 +25,6 @@ class Solution:
 if __name__ == "__main__":
 	num = [3, 30, 34, 5, 9]
 	print Solution().largestNumber(num)
+
+	print '10' < '100'  # True
+	print '20' < '100'  # False

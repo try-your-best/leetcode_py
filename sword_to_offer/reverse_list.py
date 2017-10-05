@@ -2,9 +2,10 @@
 
 """
 第16题，反转链表
-思路： 要用三个指针去遍历， pNode 和 pPrev 跨栈传递
+思路： 要用三个指针去遍历， pNode 和 pPrev 跨栈传递, pNext 栈中新建
 """
 
+from common.utils import printList
 from kth_node_from_end import ListNode
 
 

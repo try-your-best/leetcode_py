@@ -8,6 +8,17 @@ class TreeNode(object):
 		self.left = left
 		self.right = right
 
+
+class NTreeNode(object):
+
+	def __init__(self, value):
+		self.value = value
+		self.children = []
+
+	def __repr__(self):
+		return 'TNode({})'.format(self.value)
+
+
 def printList(pHead):
 	values = []
 	while pHead:

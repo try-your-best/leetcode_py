@@ -11,6 +11,7 @@ def merge_sort(seq):
 
 
 def merge(left, right):
+	"""一个缺点就是要用到两个临时的数组内存"""
 	result = []
 	i, j = 0, 0
 	while i < len(left) and j < len(right):

@@ -6,28 +6,32 @@ __author__ = 'DamonHao'
 """
 
 
-def quick_sort(ary, left, right):
-	if left < right:
-		q = partition(ary, left, right)
-		quick_sort(ary, left, q - 1)
-		quick_sort(ary, q + 1, right)
+def quick_sort(array):
+	quick_sort_core(array, 0, len(array)-1)
+	return array
 
 
-def partition(ary, left, right):
-	pivot = ary[right]
-	i = left-1  # i 始终指向 <= pivot 的值
-	for j in xrange(left, right):
-		if ary[j] <= pivot:
+def quick_sort_core(array, left, righ):
+	if left < righ:
+		p = partition(array, left, righ)
+		quick_sort_core(array, left, p-1)
+		quick_sort_core(array, p+1, righ)
+
+
+def partition(array, left, righ):
+	pivot = array[righ]
+	i = left - 1  # i 始终指向 <= pivot 的值
+	for j in xrange(left, righ):
+		if array[j] <= pivot:
 			i += 1
-			ary[j], ary[i] = ary[i], ary[j]
+			array[i], array[j] = array[j], array[i]
 
-	ary[i + 1], ary[right] = ary[right], ary[i + 1]
+	i += 1
+	array[i], array[righ] = array[righ], array[i]
 
-	return i+1
+	return i
 
 
 if __name__ == '__main__':
-	ary = [4, 3, 1, 2]
-	# ary = []
-	quick_sort(ary, 0, len(ary) - 1)
-	print ary
+	array = [4, 3, 1, 2]
+	print quick_sort(array)

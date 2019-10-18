@@ -1,5 +1,16 @@
 # -*- coding: utf-8 -*-
 
+
+"""
+https://www.cnblogs.com/grandyang/p/5240774.html
+
+[LeetCode] Meeting Rooms 会议室
+
+先对起始时间进行排序
+
+"""
+
+
 # Time:  O(nlogn)
 # Space: O(n)
 #
@@ -41,6 +52,6 @@ if __name__ == "__main__":
 	intervals = []
 	# intervals = [Interval(1, 4)]
 	# intervals = [Interval(1, 4), Interval(3, 5)]
-	# intervals = [Interval(1, 4), Interval(4, 5)]
+	intervals = [Interval(1, 4), Interval(4, 5)]
 	# intervals = [Interval(1, 4), Interval(5, 5)]
 	print Solution().canAttendMeetings(intervals)

@@ -46,6 +46,7 @@ class Solution:
 			n /= 10
 		return num
 
+
 if __name__ == '__main__':
 	print Solution().isHappy(19)
 	print Solution().isHappy(11)

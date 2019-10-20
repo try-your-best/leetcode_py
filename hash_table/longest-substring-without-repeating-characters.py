@@ -31,10 +31,33 @@ class Solution:
 
 		return longest
 
+
+class Solution(object):
+	def lengthOfLongestSubstring(self, s):
+		"""
+		:type s: str
+		:rtype: int
+		"""
+
+		begin = 0
+		max_len = 0
+		look_up = {}
+
+		for idx, cur_s in enumerate(s):
+			if cur_s in look_up and look_up[cur_s] >= begin:  # 注意小于 begin 的就不算重复了
+				max_len = max(max_len, idx - begin)
+				begin = look_up[cur_s] + 1
+
+			look_up[cur_s] = idx
+
+		max_len = max(max_len, len(s) - begin)
+
+		return max_len
+
+
 if __name__ == '__main__':
-	s = "abcabcbb"
-	print Solution().lengthOfLongestSubstring(s)
-	s = "bbbbb"
-	print Solution().lengthOfLongestSubstring(s)
-	s = 'pwwkew'
-	print Solution().lengthOfLongestSubstring(s)
+	sl = Solution()
+	print sl.lengthOfLongestSubstring("abcabcbb")
+	print sl.lengthOfLongestSubstring("bbbbb")
+	print sl.lengthOfLongestSubstring("pwwkew")
+	print sl.lengthOfLongestSubstring("abba")

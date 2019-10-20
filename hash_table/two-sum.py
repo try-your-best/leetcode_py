@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'DamonHao'
 
-# Given an array of integers, return indices of the two numbers
+# Given an arrays of integers, return indices of the two numbers
 # such that they add up to a specific target.
 #
 # You may assume that each input would have exactly one solution.
@@ -23,15 +23,16 @@ class Solution(object):
 		:type target: int
 		:rtype: List[int]
 		"""
-		lookUp = {}
-		for idx, num in enumerate(nums):
-			diff = target - num
-			if diff in lookUp:
-				return [lookUp[diff], idx]
-			else:
-				lookUp[num] = idx
+		look_up = {}
 
+		for index, num in enumerate(nums):
+			diff = target - num
+			if diff in look_up:
+				return [look_up[diff], index]
+			else:
+				look_up[num] = index
 		return []
+
 
 if __name__ == "__main__":
 	nums = [2, 7, 11, 15]

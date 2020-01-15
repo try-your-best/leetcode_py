@@ -44,7 +44,7 @@ def heapify_loop(ary, i, heap_size):
 def build_max_heap(ary):
 	heap_size = len(ary)
 	# 当下标1开始时，叶子节点是从 heap_size//2 + 1 开始，从 0 开始时，最后一个非叶子节点是 heap_size//2-1
-	for i in xrange(heap_size//2-1, -1, -1):  # 自底向上
+	for i in range(heap_size//2-1, -1, -1):  # 自底向上
 		heapify_loop(ary, i, heap_size)
 
 
@@ -52,7 +52,7 @@ def heap_sort(ary):
 	build_max_heap(ary)
 	heap_size = len(ary)
 
-	for i in xrange(heap_size-1, -1, -1):
+	for i in range(heap_size-1, -1, -1):
 		ary[i], ary[0] = ary[0], ary[i]
 		heap_size -= 1
 		heapify(ary, 0, heap_size)
@@ -62,4 +62,4 @@ if __name__ == '__main__':
 	ary = [4, 3, 1, 2, 6]
 	# ary = []
 	heap_sort(ary)
-	print ary
+	print(ary)

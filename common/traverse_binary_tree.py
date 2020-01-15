@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
-from utils import TreeNode
+from .utils import TreeNode
 
 
 def preorderWalk(node):
 	if node is not None:
-		print node.value
+		print(node.value)
 		preorderWalk(node.left)
 		preorderWalk(node.right)
 
@@ -15,7 +15,7 @@ def preorderWalkLoop(node):
 	nodeStack = []
 	while node or nodeStack:
 		while node:  # 注意是 while 并且与最外层while循环顺序的对应
-			print node.value
+			print(node.value)
 			nodeStack.append(node)
 			node = node.left
 
@@ -27,7 +27,7 @@ def preorderWalkLoop(node):
 def inorderWalk(node):
 	if node is not None:
 		inorderWalk(node.left)
-		print node.value
+		print(node.value)
 		inorderWalk(node.right)
 
 
@@ -40,7 +40,7 @@ def inorderWalkLoop(node):
 
 		if nodeStack:  # 注意是 if 并且与最外层while循环顺序的对应
 			node = nodeStack.pop()
-			print node.value
+			print(node.value)
 			node = node.right
 
 
@@ -48,7 +48,7 @@ def postorderWalk(node):
 	if node is not None:
 		postorderWalk(node.left)
 		postorderWalk(node.right)
-		print node.value
+		print(node.value)
 
 
 def postorderWalkLoop(node):
@@ -69,7 +69,7 @@ def postorderWalkLoop(node):
 			node = nodeStack[-1]
 			# 当前节点的右孩子如果为空或者已经被访问，则访问当前节点
 			if node.right is None or node.right == preVisited:
-				print node.value
+				print(node.value)
 				preVisited = node
 				node = None  # 注意， 设置为 None， 找栈顶元素
 				nodeStack.pop()

@@ -5,8 +5,8 @@
 
 def bubble_sort(ary):
 	n = len(ary)
-	for i in xrange(n):
-		for j in xrange(1, n-i):
+	for i in range(n):
+		for j in range(1, n-i):
 			if ary[j-1] > ary[j]:
 				ary[j - 1], ary[j] = ary[j], ary[j-1]
 	return ary
@@ -46,4 +46,4 @@ def bubble_sort3(ary):
 
 if __name__ == '__main__':
 	ary = [4, 3, 1, 2, 6]
-	print bubble_sort(ary)
+	print(bubble_sort3(ary))

@@ -13,12 +13,12 @@ def counting_sort(ary):
 	for a in ary:
 			count[a] += 1  # count occurences
 	i = 0
-	for a in xrange(m):  # emit
-			for c in xrange(count[a]):  # - emit 'count[a]' copies of 'a'
+	for a in range(m):  # emit
+			for c in range(count[a]):  # - emit 'count[a]' copies of 'a'
 					ary[i] = a
 					i += 1
 	return ary
 
 
 if __name__ == '__main__':
-	print counting_sort([1, 4, 7, 2, 1, 3, 2, 1, 4, 2, 3, 2, 1])
+	print(counting_sort([1, 4, 7, 2, 1, 3, 2, 1, 4, 2, 3, 2, 1]))

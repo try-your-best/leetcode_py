@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# 快排的一个经典应用， 复杂度是 O(n)
+# 快排的一个经典应用， 复杂度是 O(n)。怎么证明它是 O(n)
 
 
 def partition(ary, left, right):
 	pivot = ary[right]
 	i = left - 1
 
-	for j in xrange(left, right):
+	for j in range(left, right):
 		if ary[j] <= pivot:
 			i += 1
 			ary[i], ary[j] = ary[j], ary[i]
@@ -33,4 +33,4 @@ def select_kth(ary, k):
 
 if __name__ == '__main__':
 	ary = [6, 1, 2, 3, 4, 5]
-	print select_kth(ary, 3)
+	print(select_kth(ary, 3))

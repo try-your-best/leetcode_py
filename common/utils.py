@@ -3,10 +3,18 @@
 
 class TreeNode(object):
 
-	def __init__(self, value, left=None, right=None):
-		self.value = value
-		self.left = left
-		self.right = right
+	def __init__(self, value):
+		self.val = value
+		self.left = None
+		self.right = None
+
+
+# class TreeNode(object):
+#
+# 	def __init__(self, value, left=None, right=None):
+# 		self.val = value
+# 		self.left = left
+# 		self.right = right
 
 
 class NTreeNode(object):
@@ -24,4 +32,4 @@ def printList(pHead):
 	while pHead:
 		values.append(pHead.value)
 		pHead = pHead.pNext
-	print values
+	print(values)

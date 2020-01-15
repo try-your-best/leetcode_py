@@ -22,8 +22,8 @@ def quick_sort(ary):
 def quick_sort_core(ary, left, right):
 	if left < right:
 		# p = partition(ary, left, right)
-		# p = partition2(ary, left, right)
-		p = partition3(ary, left, right)
+		p = partition2(ary, left, right)
+		# p = partition3(ary, left, right)
 		quick_sort_core(ary, left, p-1)
 		quick_sort_core(ary, p+1, right)
 
@@ -31,7 +31,7 @@ def quick_sort_core(ary, left, right):
 def partition(ary, left, right):
 	pivot = ary[right]
 	i = left - 1  # i 始终指向 <= pivot 的值
-	for j in xrange(left, right):
+	for j in range(left, right):
 		if ary[j] <= pivot:
 			i += 1
 			ary[i], ary[j] = ary[j], ary[i]
@@ -44,8 +44,8 @@ def partition(ary, left, right):
 
 def partition2(ary, left, right):
 	if right - left >= 2:
-		mid = left + (right-left)/2
-		# 找三者中间值并让中间值是 ary[right]
+		mid = left + int((right-left)/2)
+		# 找三者中间值并让中间值是 ary[right], 预防取到最大或最小值
 		if ary[left] < ary[mid] < ary[right]:
 			ary[mid], ary[right] = ary[right], ary[mid]
 		elif ary[mid] < ary[left] < ary[right]:
@@ -54,7 +54,7 @@ def partition2(ary, left, right):
 	pivot = ary[right]
 
 	i = left - 1  # i 始终指向 <= pivot 的值
-	for j in xrange(left, right):
+	for j in range(left, right):
 		if ary[j] <= pivot:
 			i += 1
 			ary[i], ary[j] = ary[j], ary[i]
@@ -73,7 +73,7 @@ def partition3(ary, left, right):
 	pivot = ary[right]
 
 	i = left - 1  # i 始终指向 <= pivot 的值
-	for j in xrange(left, right):
+	for j in range(left, right):
 		if ary[j] <= pivot:
 			i += 1
 			ary[i], ary[j] = ary[j], ary[i]
@@ -86,4 +86,4 @@ def partition3(ary, left, right):
 
 if __name__ == '__main__':
 	ary = [4, 3, 1, 2, 4, 8, 9]
-	print quick_sort(ary)
+	print(quick_sort(ary))

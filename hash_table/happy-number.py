@@ -48,5 +48,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-	print Solution().isHappy(19)
-	print Solution().isHappy(11)
+	print(Solution().isHappy(19))
+	print(Solution().isHappy(11))

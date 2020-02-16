@@ -24,8 +24,7 @@ class TwoSum(object):
 		:type value: int
 		:rtype: bool
 		"""
-
-		for n in self.lookup.iterkeys():
+		for n in self.lookup.keys():
 			diff = value - n
 			if diff in self.lookup and (diff != n or self.lookup[diff] > 1):
 				return True
@@ -41,6 +40,6 @@ if __name__ == '__main__':
 	ts.add(2)
 	ts.add(3)
 
-	print ts.find(2)
-	print ts.find(3)
-	print ts.find(6)
+	print(ts.find(2))
+	print(ts.find(3))
+	print(ts.find(6))

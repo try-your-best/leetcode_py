@@ -44,5 +44,5 @@ class Solution:
 
 if __name__ == "__main__":
 	intervals = [Interval(0, 30), Interval(5, 10), Interval(15, 20)]
-	print Solution().minMeetingRooms(intervals)
+	print(Solution().minMeetingRooms(intervals))
 

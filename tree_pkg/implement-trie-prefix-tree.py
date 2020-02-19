@@ -3,6 +3,7 @@
 # Time:  O(n), per operation
 # Space: O(1)
 
+
 class TrieNode(object):
     # Initialize your data structure here.
     def __init__(self):
@@ -64,9 +65,9 @@ class Trie(object):
 # Your Trie object will be instantiated and called as such:
 trie = Trie();
 
-trie.insert("apple");
-print trie.search("apple");   # returns true
-print trie.search("app");     # returns false
-print trie.startsWith("app"); # returns true
-trie.insert("app");
-print trie.search("app");     # returns true
+trie.insert("apple")
+print(trie.search("apple"))  # returns true
+print(trie.search("app"))     # returns false
+print(trie.startsWith("app")) # returns true
+trie.insert("app")
+print(trie.search("app"))     # returns true

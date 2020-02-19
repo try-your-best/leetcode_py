@@ -2,13 +2,15 @@
 
 from common.utils import TreeNode
 
+"""
+Time:  O(n)
+Space: O(h)
+DFS, Recursive solution.
+"""
 
-# Time:  O(n)
-# Space: O(h)
-# DFS, Recursive solution.
 
-class Solution(object):
-	def invertTree(self, root):
+class Solution:
+	def invertTree(self, root: TreeNode) -> TreeNode:
 		if root is None:
 			return None
 

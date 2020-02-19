@@ -100,4 +100,4 @@ if __name__ == "__main__":
 	head.next = ListNode(5)
 	head.next.next = ListNode(1)
 	# print Solution().sortList(head)
-	print Solution2().sortList(head)
+	print(Solution2().sortList(head))

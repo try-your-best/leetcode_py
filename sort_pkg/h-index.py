@@ -18,12 +18,13 @@ __author__ = 'DamonHao'
 # Note: If there are several possible values for h, the maximum one is taken as the h-index.
 #
 
+from common.utils import *
 
 # Time:  O(n)
 # Space: O(n)
 # Counting sort.
-class Solution(object):
-	def hIndex(self, citations):
+class Solution:
+	def hIndex(self, citations: List[int]) -> int:
 		"""
 		:type citations: List[int]
 		:rtype: int
@@ -40,7 +41,7 @@ class Solution(object):
 				count[x] += 1
 
 		h = 0
-		for idx in xrange(n, 0, -1):
+		for idx in range(n, 0, -1):
 			h += count[idx]
 			if h >= idx:
 				return idx
@@ -49,7 +50,9 @@ class Solution(object):
 
 # Time:  O(nlogn)
 # Space: O(1)
-class Solution2(object):
+
+
+class Solution:
 	def hIndex(self, citations):
 		"""
 		:type citations: List[int]
@@ -68,4 +71,4 @@ class Solution2(object):
 if __name__ == "__main__":
 	citations = [3, 0, 6, 1, 5]
 	# print Solution().hIndex(citations)
-	print Solution2().hIndex(citations)
+	print(Solution2().hIndex(citations))

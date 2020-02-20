@@ -16,13 +16,15 @@
 # Time:  O(n) ~ O(n^2), O(n) on average.
 # Space: O(n)
 
+
+from common.utils import *
+
 import collections
-from heapq import nlargest
 
 
-class Solution(object):
+class Solution:
 
-	def topKFrequent(self, nums, k):
+	def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 		"""
 		:type nums: List[int]
 		:type k: int
@@ -33,7 +35,7 @@ class Solution(object):
 		for num in nums:
 			counts[num] += 1
 
-		numPairs = [(num, count) for num, count in counts.iteritems()]
+		numPairs = list(counts.items())
 		self.selectTopK(numPairs, k)
 		return [numPair[0] for numPair in numPairs[:k]]
 
@@ -42,7 +44,7 @@ class Solution(object):
 			pivot = ary[right]
 			i = left - 1
 
-			for j in xrange(left, right):
+			for j in range(left, right):
 				if ary[j][1] >= pivot[1]:
 					i += 1
 					ary[j], ary[i] = ary[i], ary[j]
@@ -61,8 +63,11 @@ class Solution(object):
 				right = index-1
 			index = partition(numPairs, left, right)
 
+Main = Solution
 
-class Solution2(object):
+from heapq import nlargest
+
+class Solution:
 
 	def topKFrequent(self, nums, k):
 		"""
@@ -75,13 +80,17 @@ class Solution2(object):
 		for num in nums:
 			counts[num] += 1
 
-		numPairs = [(num, count) for num, count in counts.iteritems()]
+		# numPairs = [(num, count) for num, count in counts.items()]
+		# numPairs = list(counts.items())
+		numPairs = counts.items()
 		topK = nlargest(k, numPairs, key=lambda x: x[1])
 		return [numPair[0] for numPair in topK]
 
 
+
 if __name__ == "__main__":
 	nums = [1,1,1,2,2,3]
-	nums = [1, 1, 6, 6, 3]
+	nums = [1, 1, 6, 6, 3, 2, 2, 2]
 	# print Solution().topKFrequent(nums, 2)
-	print Solution2().topKFrequent(nums, 2)
+	sl = Main()
+	print(sl.topKFrequent(nums, 2))

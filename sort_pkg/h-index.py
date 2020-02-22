@@ -68,7 +68,11 @@ class Solution:
 		return h
 
 
+Main = Solution
+
 if __name__ == "__main__":
 	citations = [3, 0, 6, 1, 5]
+	citations = [6, 5, 3, 1, 0]
+	sl = Main()
 	# print Solution().hIndex(citations)
-	print(Solution2().hIndex(citations))
+	print(sl.hIndex(citations))

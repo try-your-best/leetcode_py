@@ -9,6 +9,8 @@ class TreeNode(object):
 		self.left = None
 		self.right = None
 
+	def __str__(self):
+		return str(self.val)
 # class TreeNode(object):
 #
 # 	def __init__(self, value, left=None, right=None):
@@ -77,6 +79,14 @@ class ListNode:
 		else:
 			return "Nil"
 
+
+def genLinkList(vals):
+	root = ListNode(vals[0])
+	a = root
+	for i in range(1, len(vals)):
+		a.next = ListNode(vals[i])
+		a = a.next
+	return root
 
 def printListNode(head:ListNode):
 	ret = []

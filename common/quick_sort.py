@@ -31,7 +31,7 @@ def quick_sort_core(ary, left, right):
 def partition(ary, left, right):
 	pivot = ary[right]
 	i = left - 1  # i 始终指向 <= pivot 的值
-	for j in range(left, right):
+	for j in range(left, right):  # 只迭代到 right-1
 		if ary[j] <= pivot:
 			i += 1
 			ary[i], ary[j] = ary[j], ary[i]

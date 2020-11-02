@@ -3,6 +3,9 @@ __author__ = 'damon'
 
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/4518674.html
+"""
 
 class Solution:
 	def rob(self, nums: List[int]) -> int:

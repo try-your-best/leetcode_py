@@ -35,9 +35,13 @@ def partition(ary, left, right):
 # a.get()
 
 
-a = []
-
-if a:
-	print 1
-else:
-	print 2
+s = '您好'
+# print(len(s))
+# print(s.encode('utf-8'))
+# print(len(s.encode('utf-8')))
+# print(type(s))
+print(s[:2])
+print(s[:1])
+print(s[1:])
+print(s[1:-1])
+print(s[:-1])

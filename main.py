@@ -1,31 +1,44 @@
+from common.utils import TreeNode
+from typing import List
 
 
-def quick_sort(array):
-	quick_sort_core(array, 0, len(array)-1)
-	return array
+class Solution:
+	def hIndex(self, citations: List[int]) -> int:
+		"""
+		:type citations: List[int]
+		:rtype: int
+		"""
+		# 这里排的是论文数
+		# 注意，这里做了优化，是 len(citations)， 而不是 max（citations）
+		n = len(citations)
+		count = [0] * (n+1)
 
+		for x in citations:
+			if x >= n:
+				count[n] += 1
+			else:
+				count[x] += 1
 
-def quick_sort_core(array, left, righ):
-	if left < righ:
-		p = partition(array, left, righ)
-		quick_sort_core(array, left, p-1)
-		quick_sort_core(array, p+1, righ)
-
-
-def partition(array, left, righ):
-	pivot = array[righ]
-	i = left - 1
-	for j in xrange(left, righ):
-		if array[j] <= pivot:
-			i += 1
-			array[i], array[j] = array[j], array[i]
-
-	i += 1
-	array[i], array[righ] = array[righ], array[i]
-
-	return i
+		h = 0
+		
 
 
 if __name__ == '__main__':
-	array = [4, 3, 1, 2]
-	print quick_sort(array)
+	sl = Solution()
+	a = TreeNode(1)
+	b = TreeNode(2)
+	c = TreeNode(3)
+	a.right = b
+	b.left = c
+	print(sl.inorderTraversal(a))
+	# print(sl.containsNearbyDuplicate([1,2,3,1], 3))
+	# print(sl.containsNearbyDuplicate([1,0,1,1], 1))
+	# print(sl.containsNearbyDuplicate([1,2,3,1,2,3], 2))
+
+	# print(19%10)
+	# print(sl.containsNearbyDuplicate([1,2,3,1], 3))
+	# print(sl.containsNearbyDuplicate([1,0,1,1], 1))
+	# print(sl.containsNearbyDuplicate([1,2,3,1,2,3], 2))
+	# print sl.lengthOfLongestSubstring("bbbbb")
+	# print sl.lengthOfLongestSubstring("pwwkew")
+	# print sl.lengthOfLongestSubstring("abba")

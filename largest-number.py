@@ -22,9 +22,10 @@ class Solution:
 		# 假设所有 num 都是 0
 		return largest.lstrip('0') or '0'
 
+
 if __name__ == "__main__":
 	num = [3, 30, 34, 5, 9]
-	print Solution().largestNumber(num)
+	print(Solution().largestNumber(num))
 
-	print '10' < '100'  # True
-	print '20' < '100'  # False
+	print('10' < '100')  # True
+	print('20' < '100')  # False

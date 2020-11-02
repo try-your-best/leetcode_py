@@ -5,6 +5,7 @@ from common.utils import *
 
 
 """
+https://www.cnblogs.com/grandyang/p/5138186.html
 对于求极值问题，主要考虑动态规划 Dynamic Programming 来做，好处是保留了一些中间状态的计算值，可以避免大量的重复计算。
 我们维护一个一维动态数组 dp，其中 dp[i] 表示钱数为i时的最小硬币数的找零，注意由于数组是从0开始的，所以要多申请一位，数组大小为 amount+1，
 这样最终结果就可以保存在 dp[amount] 中了。初始化 dp[0] = 0，因为目标值若为0时，就不需要硬币了。其他值可以初始化是 amount+1，为啥呢？

@@ -1,34 +1,11 @@
 # -*- coding: utf-8 -*-
 __author__ = "damon"
 
-
-# class Solution(object):
-# 	def removeDuplicates(self, nums):
-# 		"""
-# 		:type nums: List[int]
-# 		:rtype: int
-# 		"""
-# 		cur = None
-# 		i = 0
-# 		j = len(nums)
-#
-# 		while i < j:
-# 			if nums[i] != cur:
-# 				cur = nums[i]
-# 				i += 1
-# 			else:
-# 				nums.pop(i)
-# 				j -= 1
-#
-# 		return j
+from typing import List
 
 
-class Solution(object):
-	def removeDuplicates(self, nums):
-		"""
-		:type nums: List[int]
-		:rtype: int
-		"""
+class Solution:
+	def removeDuplicates(self, nums: List[int]) -> int:
 		if not nums:
 			return 0
 
@@ -37,7 +14,6 @@ class Solution(object):
 			if nums[last] != nums[i]:
 				last += 1
 				nums[last] = nums[i]
-
 		return last+1
 
 

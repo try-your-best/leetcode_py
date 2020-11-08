@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 __author__ = 'damon'
 
-import collections
+"""
+https://www.cnblogs.com/grandyang/p/5187640.html
+"""
 
+import collections
 
 class WordDistance:
 	# initialize your data structure here.

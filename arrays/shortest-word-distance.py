@@ -57,6 +57,27 @@ class Solution(object):
 		return min_dist
 
 
+class Solution(object):
+	def shortestDistance(self, words, word1, word2):
+		p1 = None
+		p2 = None
+		w_len = len(words)
+		min_dis = w_len
+		for idx, w in enumerate(words):
+			flag = False
+			if w == word1:
+				p1 = idx
+				flag = True
+			elif w == word2:
+				p2 = idx
+				flag = True
+
+			if flag and p1 is not None and p2 is not None:
+				min_dis = min(min_dis, abs(p1-p2))
+
+		return min_dis
+
+
 if __name__ == '__main__':
 	sl = Solution()
 	print(sl.shortestDistance(["practice", "makes", "perfect", "coding", "makes"], 'coding', 'practice'))

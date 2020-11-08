@@ -35,7 +35,7 @@ def reverse(strList, start, end):
 
 
 if __name__ == "__main__":
-	print reverseSentence('I am a student.')
-	print reverseSentence('   ')
-	print reverseSentence('you are a    ')
+	print(reverseSentence('I am a student.'))
+	print(reverseSentence('   '))
+	print(reverseSentence('you are a    '))
 

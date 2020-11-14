@@ -10,7 +10,7 @@ class Solution:
 			left_valid = self._isValid(s[left])
 			right_valid = self._isValid(s[right])
 			if left_valid and right_valid:
-				if s[left].lower() != s[right].lower():
+				if s[left].lower() != s[right].lower():  # 记得用 lower
 					return False
 				left += 1
 				right -= 1
@@ -24,10 +24,11 @@ class Solution:
 		return True
 
 	def _isValid(self, s: str):
-		return '0' <= s <= '9' or 'a' <= s <= 'z' or 'A' <= s <= 'Z'
+		return '0' <= s <= '9' or 'a' <= s <= 'z' or 'A' <= s <= 'Z'  # python 会用 ord 进行字符串比较
 
 
 if __name__ == '__main__':
 	sl =Solution()
 	print(sl.isPalindrome('A man, a plan, a canal: Panama'))
 	print(sl.isPalindrome('race a car'))
+	print(ord("a"))

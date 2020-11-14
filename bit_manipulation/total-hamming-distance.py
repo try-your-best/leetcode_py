@@ -1,5 +1,8 @@
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/6208062.html
+"""
 
 class Solution:
 	def totalHammingDistance(self, nums: List[int]) -> int:

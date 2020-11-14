@@ -1,5 +1,8 @@
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/4428207.html
+"""
 
 class Solution:
 	def nextPermutation(self, nums: List[int]) -> None:

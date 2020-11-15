@@ -37,7 +37,42 @@ class Solution:
 		return fast
 
 
+class Solution:
+	def rotateRight(self, head: ListNode, k: int) -> ListNode:
+		if head is None:
+			return head
+		dummy = ListNode(None)
+		dummy.next = head
+		list_len = 0
+		fast = dummy
+		while fast.next is not None:
+			list_len += 1
+			fast = fast.next
+
+		if list_len == 1:
+			return head
+
+		k_step = k % list_len
+		if k_step == 0:
+			return dummy.next
+
+		fast = dummy
+		slow = dummy
+		for i in range(k_step):
+			fast = fast.next
+
+		while fast.next is not None:
+			fast = fast.next
+			slow = slow.next
+
+		fast.next = dummy.next
+		dummy.next = slow.next
+		slow.next = None
+
+		return dummy.next
+
 if __name__ == '__main__':
 	sl = Solution()
 	# print(sl.rotateRight(genLinkList([1,2,3,4,5]),2))
 	print(sl.rotateRight(genLinkList([0,1,2]), 4))
+	print(sl.rotateRight(genLinkList([]), 0))

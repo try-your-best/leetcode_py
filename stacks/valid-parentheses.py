@@ -1,4 +1,7 @@
 
+"""
+https://www.cnblogs.com/grandyang/p/4424587.html
+"""
 
 class Solution:
 	def isValid(self, s: str) -> bool:

@@ -49,9 +49,9 @@ class Solution:
 				s_keep = ''
 		return ''.join(str_list)
 
-
-
-"""能用 stack 的优先考虑递归，写起来简单"""
+"""
+能用 stack 的优先考虑递归，写起来简单。每次遇到 [，就是调用函数栈的时机。
+"""
 class Solution:
 	def decodeString(self, s: str) -> str:
 		self.i = 0

@@ -13,7 +13,7 @@ class MinStack:
 
 	def push(self, x: int) -> None:
 		self.normal_stack.append(x)
-		if not self.min_stack or x <= self.min_stack[-1]: # 注意这里是小于等于，
+		if not self.min_stack or x <= self.min_stack[-1]:  # 注意这里是小于等于，没次遇到等于最小值都要 append
 			self.min_stack.append(x)
 
 	def pop(self) -> None:

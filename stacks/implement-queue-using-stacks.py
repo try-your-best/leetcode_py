@@ -4,6 +4,7 @@ __author__ = 'damon'
 """
 https://www.cnblogs.com/grandyang/p/4626238.html
 用 python 不大会出这种题
+偏向 pop 和 peek 的效率
 """
 
 

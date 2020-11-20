@@ -35,3 +35,4 @@ if __name__ == '__main__':
 	print(sl.findMaxLength([0,1]))
 	print(sl.findMaxLength([0,1,0]))
 	print(sl.findMaxLength([0,1,0,1,1,0,0]))
+	print(sl.findMaxLength([1,0,1,0]))

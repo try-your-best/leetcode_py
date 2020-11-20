@@ -38,7 +38,22 @@ class Solution(object):
 		return self.ans - 1
 
 
-def test1():
+class Solution:
+	def diameterOfBinaryTree(self, root: TreeNode) -> int:
+		self.ans = 0
+		self._maxDepth(root)
+		return self.ans
+
+	def _maxDepth(self, root: TreeNode):
+		if root is None:
+			return 0
+		left = self._maxDepth(root.left)
+		right = self._maxDepth(root.right)
+		self.ans = max(self.ans, left+right)
+		return max(left, right) + 1
+
+
+def fun1():
 	sl = Solution()
 	a = TreeNode(1)
 	b = TreeNode(2)
@@ -51,7 +66,7 @@ def test1():
 	b.right = e
 	print(sl.diameterOfBinaryTree(a))
 
-def test2():
+def fun2():
 	sl = Solution()
 	a = TreeNode(1)
 	b = TreeNode(2)
@@ -65,4 +80,5 @@ def test2():
 	print(sl.diameterOfBinaryTree(a))
 
 if __name__ == '__main__':
-	test1()
+	fun1()
+	fun2()

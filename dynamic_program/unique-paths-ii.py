@@ -23,7 +23,7 @@ class Solution:
 		print(obstacleGrid)
 		m = len(obstacleGrid)
 		n = len(obstacleGrid[0])
-		dp = [[0] * (n+1) for _ in range((m+1))]
+		dp = [[0] * (n+1) for _ in range((m+1))]  # 初始化为 0
 		# for d in dp:
 		# 	print(id(d))
 		# print(dp)

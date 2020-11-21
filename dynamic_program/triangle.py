@@ -19,6 +19,7 @@ class Solution:
 			dp[max_j] = dp[max_j-1] + triangle[i][max_j]
 			for j in range(max_j-1, 0, -1):  # not 0 is not included
 				# print('a',j, dp[j], dp[j-1], triangle[i][j])
+				# 核心方程  dp[i][j] = min(dp[i-1][j], dp[i-1][j-1])，这里倒序更新刚好满足 dp[i-1][j] 更新成 dp[i][j]，不破坏状态依赖。
 				dp[j] = min(dp[j], dp[j-1]) + triangle[i][j]
 			dp[0] += triangle[i][0]
 			# print(i, dp)

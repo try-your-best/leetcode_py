@@ -5,6 +5,7 @@ from common.utils import *
 
 """
 https://www.cnblogs.com/grandyang/p/4518674.html
+问题1的变种，因为是环，所以第一和最后一个位置互斥，生成两序列。退化成问题1。
 """
 
 class Solution:

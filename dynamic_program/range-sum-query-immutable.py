@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 __author__ = 'damon'
 
+"""
+https://www.cnblogs.com/grandyang/p/4952464.html
+"""
 
 class NumArray(object):
 

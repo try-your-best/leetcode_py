@@ -29,6 +29,23 @@ class Solution:
 		return dp[n]
 
 
+class Solution:
+	def numDecodings(self, s: str) -> int:
+		valid_set = set([str(i) for i in range(1, 27)])
+		n = len(s)
+		dp = [0] * (n+1)
+		dp[0] = 1
+		dp[1] = 1 if s[0] in valid_set else 0
+		for i in range(2, n+1):
+			if s[i-1] in valid_set:
+				dp[i] += dp[i-1]
+			if s[i-2:i] in valid_set:
+				dp[i] += dp[i-2]
+
+		return dp[n]
+
+
+
 
 if __name__ == '__main__':
 	sl = Solution()
@@ -37,3 +54,4 @@ if __name__ == '__main__':
 	print(sl.numDecodings('201')) #
 	print(sl.numDecodings('301')) #
 	print(sl.numDecodings('1301')) #
+	print(sl.numDecodings('0'))  # 0

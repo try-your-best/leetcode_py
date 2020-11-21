@@ -9,15 +9,15 @@ class Solution:
 	def climbStairs(self, n: int) -> int:
 		if n <= 2:
 			return n
-		a = 1
-		b = 2
-		c = 0
+		n1 = 1
+		n2 = 2
+		n3 = 0
 		for i in range(2, n):
-			c = b + a
-			a = b
-			b = c
+			n3 = n2 + n1
+			n1 = n2
+			n2 = n3
 
-		return c
+		return n3
 
 
 if __name__ == '__main__':

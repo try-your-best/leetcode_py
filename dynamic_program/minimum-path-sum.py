@@ -14,6 +14,7 @@ https://www.cnblogs.com/grandyang/p/4353255.html
 第一列的位置从能从上面过来，所以这两行要提前初始化好，然后再从 (1, 1) 的位置开始更新到右下角即可，反正难度不算大，代码如下：
 """
 
+
 class Solution:
 	def minPathSum(self, grid: List[List[int]]) -> int:
 		m = len(grid)
@@ -27,11 +28,28 @@ class Solution:
 		return dp[m][n]
 
 
+class Solution:
+	def minPathSum(self, grid: List[List[int]]) -> int:
+		row = len(grid)
+		col = len(grid[0])
+		dp = [float('inf')] * (col+1)
+		dp[1] = 0 # 注意边界的初始值
+		for i in range(1, row+1):
+			for j in range(1, col+1):
+				dp[j] = min(dp[j-1], dp[j]) + grid[i-1][j-1]
+		return dp[col]
+
+
 if __name__ == '__main__':
 	sl = Solution()
+	# grid = [
+  # [1,3,1],
+  # [1,5,1],
+  # [4,2,1]
+	# ]
+
 	grid = [
-  [1,3,1],
-  [1,5,1],
-  [4,2,1]
+		[1, 2],
+		[1, 1]
 	]
 	print(sl.minPathSum(grid))

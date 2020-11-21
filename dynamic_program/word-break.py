@@ -4,6 +4,7 @@ __author__ = 'damon'
 from common.utils import *
 
 """
+https://www.cnblogs.com/grandyang/p/4257740.html
 DP 解法的两大难点，定义 dp 数组跟找出状态转移方程，先来看 dp 数组的定义，这里我们就用一个一维的 dp 数组，其中 dp[i] 表示范围 [0, i) 
 内的子串是否可以拆分，注意这里 dp 数组的长度比s串的长度大1，是因为我们要 handle 空串的情况，我们初始化 dp[0] 为 true，然后开始遍历。
 注意这里我们需要两个 for 循环来遍历，因为此时已经没有递归函数了，所以我们必须要遍历所有的子串，我们用j把 [0, i) 范围内的子串分为了两部分，[0, j) 
@@ -20,6 +21,7 @@ class Solution:
 		dp[0] = True
 		for i in range(1, n+1):
 			for j in range(1, i+1):
+				# 注意是 dp[j-1]， [0,j) 和 [j,i), 注意开和闭区间
 				if dp[j-1] and s[j-1:i] in word_set:
 					dp[i] = True
 					break

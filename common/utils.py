@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from typing import List, Set
+from typing import List, Set, Dict
 
 class TreeNode(object):
 
@@ -75,6 +75,7 @@ class ListNode:
 
 	def __repr__(self):
 		if self:
+			# print(self.val, self.next.val if self.next else None)
 			return "{} -> {}".format(self.val, repr(self.next))
 		else:
 			return "Nil"

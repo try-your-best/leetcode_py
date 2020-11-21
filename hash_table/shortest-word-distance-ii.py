@@ -3,6 +3,7 @@ __author__ = 'damon'
 
 """
 https://www.cnblogs.com/grandyang/p/5187640.html
+注意有 shortest-word-distance， 
 """
 
 import collections

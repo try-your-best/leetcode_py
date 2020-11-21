@@ -23,7 +23,7 @@ Return:
  
 
 Note: For the return value, each inner list's elements must follow the lexicographic order.
-
+通过间隔去编码
 """
 
 

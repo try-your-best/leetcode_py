@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 __author__ = 'damon'
 
+"""
+https://www.cnblogs.com/grandyang/p/5223238.html
+注意：不能用异或，因为无法处理奇数情况
+"""
 
 class Solution(object):
 	def canPermutePalindrome(self, s):

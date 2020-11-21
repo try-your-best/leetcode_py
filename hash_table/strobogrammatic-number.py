@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 __author__ = 'damon'
 
+"""
+https://www.cnblogs.com/grandyang/p/5196960.html
+"""
 
 class Solution(object):
 		def isStrobogrammatic(self, num: str):

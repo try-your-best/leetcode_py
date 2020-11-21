@@ -2,7 +2,8 @@
 __author__ = 'DamonHao'
 
 """
-这种考核概率很小
+这种考核概率很小,  埃拉托斯特尼筛法 Sieve of Eratosthenes
+https://www.cnblogs.com/grandyang/p/4462810.html
 """
 
 

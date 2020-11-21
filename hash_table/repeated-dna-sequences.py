@@ -3,6 +3,9 @@ __author__ = 'damon'
 
 from typing import List
 
+"""
+https://www.cnblogs.com/grandyang/p/4284205.html
+"""
 
 class Solution:
 	def findRepeatedDnaSequences(self, s: str) -> List[str]:

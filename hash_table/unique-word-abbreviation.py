@@ -3,6 +3,10 @@ __author__ = 'damon'
 
 from collections import defaultdict
 
+"""
+https://www.cnblogs.com/grandyang/p/5220589.html
+保留头尾字符串，还有中间长度。除了判断缩写，还要判断单词是否在字典中。
+"""
 
 class ValidWordAbbr:
 	def __init__(self, dictionary):

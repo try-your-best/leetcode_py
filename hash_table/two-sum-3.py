@@ -3,6 +3,10 @@ __author__ = 'damon'
 
 from collections import defaultdict
 
+"""
+https://www.cnblogs.com/grandyang/p/5184143.html
+注意，值可以重复
+"""
 
 class TwoSum(object):
 	def __init__(self):

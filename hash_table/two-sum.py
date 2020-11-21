@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 __author__ = 'DamonHao'
 """
+https://www.cnblogs.com/grandyang/p/4130379.html
+
 Given an arrays of integers, return indices of the two numbers
 such that they add up to a specific target.
 

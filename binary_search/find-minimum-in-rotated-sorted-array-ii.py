@@ -3,6 +3,9 @@ __author__ = 'damon'
 
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/4040438.html
+"""
 
 class Solution:
 	def findMin(self, nums: List[int]) -> int:

@@ -3,6 +3,10 @@ __author__ = 'damon'
 
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/8284940.html
+"""
+
 
 class Solution:
 	def nextGreatestLetter(self, letters: List[str], target: str) -> str:

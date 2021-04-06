@@ -3,6 +3,10 @@ __author__ = 'damon'
 
 from collections import defaultdict
 
+"""
+同构字符串 
+https://www.cnblogs.com/grandyang/p/4465779.html
+"""
 
 class Solution:
 	def isIsomorphic(self, s: str, t: str) -> bool:
@@ -18,9 +22,6 @@ class Solution:
 		return set([tuple(x) for x in s_dict.values()]) == set([tuple(x) for x in t_dict.values()])
 
 
-"""
-https://www.cnblogs.com/grandyang/p/4465779.html
-"""
 class Solution:
 	def isIsomorphic(self, s: str, t: str) -> bool:
 		"""
@@ -35,7 +36,8 @@ class Solution:
 		for idx in range(0, len(s)):
 			s_code = ord(s[idx])
 			t_code = ord(t[idx])
-			if s_lookup[s_code] != t_lookup[t_code]: return False
+			if s_lookup[s_code] != t_lookup[t_code]:
+				return False
 			s_lookup[s_code] = idx
 			t_lookup[t_code] = idx
 

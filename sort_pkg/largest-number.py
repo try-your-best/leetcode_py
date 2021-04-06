@@ -5,12 +5,17 @@ from common.utils import *
 
 import functools
 
+"""
+https://www.cnblogs.com/grandyang/p/4225047.html
+"""
+
 
 class Solution:
 	def largestNumber(self, nums: List[int]) -> str:
 		if not nums:
 			return ''
 		nums_str = [str(x) for x in nums]
+
 		def compare(x, y):
 			x_y = x + y
 			y_x = y + x

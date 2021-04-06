@@ -14,7 +14,7 @@ class Solution:
 		elif len(nums) == 1:
 			return nums[0]
 		n = len(nums)
-		dp = [0] * (n+1)
+		dp = [0] * n
 		dp[0] = nums[0]
 		dp[1] = max(nums[0], nums[1])
 		for i in range(2, n):
@@ -28,7 +28,7 @@ class Solution:
 		if not nums:
 			return 0
 		n = len(nums)
-		dp = [0] * (n+1)
+		dp = [0] * (n+1)  # 这种初始化状态转移更漂亮
 		dp[1] = nums[0]
 		for i in range(2, n+1):
 			dp[i] = max(dp[i-1], dp[i-2]+nums[i-1])
@@ -39,3 +39,4 @@ if __name__ == '__main__':
 	sl = Solution()
 	print(sl.rob([1,2,3,1])) # 4
 	print(sl.rob([2,7,9,3,1])) # 12
+	print(sl.rob([1,1,2]))

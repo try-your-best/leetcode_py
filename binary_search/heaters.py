@@ -5,6 +5,7 @@ from common.utils import *
 
 """
 https://www.cnblogs.com/grandyang/p/6181626.html
+计算加热器要覆盖全部house 需要的最小半径
 """
 
 class Solution:

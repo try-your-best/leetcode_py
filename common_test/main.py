@@ -40,8 +40,23 @@ s = '您好'
 # print(s.encode('utf-8'))
 # print(len(s.encode('utf-8')))
 # print(type(s))
-print(s[:2])
-print(s[:1])
-print(s[1:])
-print(s[1:-1])
-print(s[:-1])
+# print(s[:2])
+# print(s[:1])
+# print(s[1:])
+# print(s[1:-1])
+# print(s[:-1])
+
+# a = 32/153
+# print(a)
+
+# b = (1-a) * (96+30) / (1258+153-32)
+
+# c = a + b
+
+# print(c)
+
+# e = 100 * (0.5/1000) + 2 * (0.5/100)
+
+# pe = 1/e
+# print(e, pe)
+

@@ -3,6 +3,7 @@ __author__ = 'damon'
 
 """
 https://www.cnblogs.com/grandyang/p/4313384.html
+这道题要求解码方法，跟之前那道 Climbing Stairs 非常的相似，但是还有一些其他的限制条件，比如说一位数时不能为0，两位数不能大于 26，其十位上的数也不能为0，除去这些限制条件，跟爬梯子基本没啥区别
 """
 
 class Solution:

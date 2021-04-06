@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# http://www.cnblogs.com/grandyang/p/5244720.html
-# https://github.com/kamyu104/LeetCode/blob/master/Python/meeting-rooms-ii.py
+"""
+http://www.cnblogs.com/grandyang/p/5244720.html
+https://github.com/kamyu104/LeetCode/blob/master/Python/meeting-rooms-ii.py
 
-# Time:  O(nlogn)
-# Space: O(n)
+Time:  O(nlogn)
+Space: O(n)
+"""
 
 # Definition for an interval.
 class Interval:

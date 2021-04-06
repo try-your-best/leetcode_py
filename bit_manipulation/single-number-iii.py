@@ -1,5 +1,9 @@
 from common.utils import *
 
+"""
+https://www.cnblogs.com/grandyang/p/4741122.html
+"""
+
 
 class Solution:
 	def singleNumber(self, nums: List[int]) -> List[int]:

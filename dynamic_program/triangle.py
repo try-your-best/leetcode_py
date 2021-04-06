@@ -4,6 +4,7 @@ __author__ = 'damon'
 from common.utils import *
 
 """
+https://www.cnblogs.com/grandyang/p/4286274.html
 动态规划最重要的是先得到核心表达式，然后在开始处理边界条件
 """
 

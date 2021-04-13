@@ -39,6 +39,22 @@ class Solution:
 		return dp[m][n]
 
 
+class Solution:
+	def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+		row = len(obstacleGrid)
+		col = len(obstacleGrid[0])
+		dp = [0] * (col+1)
+		dp[1] = 1  # 这个初始化起决定作用
+		for i in range(1, row+1):
+			for j in range(1, col+1):
+				if obstacleGrid[i-1][j-1] == 1:
+					dp[j] = 0
+				else:
+					dp[j] += dp[j-1]
+
+		return dp[col]
+
+
 if __name__ == '__main__':
 	sl = Solution()
 	obstacleGrid = [
@@ -46,5 +62,4 @@ if __name__ == '__main__':
   [0,1,0],
   [0,0,0]
 	]
-
 	print(sl.uniquePathsWithObstacles(obstacleGrid))

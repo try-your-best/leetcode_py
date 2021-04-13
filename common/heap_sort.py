@@ -58,8 +58,21 @@ def heap_sort(ary):
 		heapify(ary, 0, heap_size)
 
 
+import heapq
+
+
+def py_heap():
+	ary = [5, 1, 3, 2, 2, 1]
+	# heapq.heapify(ary)
+	# print(ary)
+	print(heapq.nlargest(3, ary))
+	print(heapq.nsmallest(2, ary))
+
+
+
 if __name__ == '__main__':
-	ary = [4, 3, 1, 2, 6]
-	# ary = []
-	heap_sort(ary)
-	print(ary)
+	# ary = [4, 3, 1, 2, 6]
+	# # ary = []
+	# heap_sort(ary)
+	# print(ary)
+	py_heap()

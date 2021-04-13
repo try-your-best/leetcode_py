@@ -48,7 +48,8 @@ class Solution:
 
 if __name__ == '__main__':
 	sl = Solution()
-	print(sl.coinChange([1, 2, 5], 11))
+	print(sl.coinChange([1, 2, 5], 11)) # 3
 	print(sl.coinChange([2], 3))
 	print(float('inf') == float('inf'))
 	print(float('inf') < float('inf'))
+	print(float('inf')+1)

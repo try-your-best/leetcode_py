@@ -35,10 +35,10 @@ def getLeastNumbers(nums, k):
 
 	maxHeap = MaxHeap()
 
-	for idx in xrange(k):
+	for idx in range(k):
 		maxHeap.heappush(nums[idx])
 
-	for idx in xrange(k, len(nums)):
+	for idx in range(k, len(nums)):
 		num = nums[idx]
 		if num < maxHeap.top():
 			maxHeap.heappop()
@@ -48,9 +48,9 @@ def getLeastNumbers(nums, k):
 
 
 if __name__ == "__main__":
-	print getLeastNumbers([1, 2, 3, 4, 5, 6], 3)
-	print getLeastNumbers([1, 1, 1, 3], 2)
-	print getLeastNumbers([3, 2, 1], 4)
+	print(getLeastNumbers([1, 2, 3, 4, 5, 6], 3))
+	print(getLeastNumbers([1, 1, 1, 3], 2))
+	print(getLeastNumbers([3, 2, 1], 4))
 
 
 
